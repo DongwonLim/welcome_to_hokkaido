@@ -22,7 +22,7 @@ public class RestaurantEntity {
     @Column(name = "restaurant_id")
     private int restaurantId;
 
-    @Column(name = "restaurant_title")
+    @Column(name = "restaurant_name")
     private String restaurantName;
 
     @Column(name = "restaurant_content")

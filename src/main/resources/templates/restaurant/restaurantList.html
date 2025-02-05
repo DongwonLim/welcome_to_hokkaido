@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Restaurant List</title>
 </head>
 <body>
 <h1>Restaurant</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Restaurant ID</th>
+        <th>Restaurant Title</th>
+        <th>Restaurant Content</th>
+        <th>Restaurant Date</th>
+        <th>Restaurant Rating</th>
+        <th>Restaurant Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="restaurant : ${restaurantList}">
+        <td th:text="${restaurant.restaurantId}"></td>
+        <td th:text="${restaurant.restaurantTitle}"></td>
+        <td th:text="${restaurant.restaurantContent}"></td>
+        <td th:text="${restaurant.restaurantDate}"></td>
+        <td th:text="${restaurant.restaurantRating}"></td>
+        <td>
+            <img th:src="@{${restaurant.restaurantImage}}" alt="Restaurant Image" width="100"/>
+        </td>
+    </tr>
+    </tbody>
+</table>
 <button>Write Post</button>
 
 </body>

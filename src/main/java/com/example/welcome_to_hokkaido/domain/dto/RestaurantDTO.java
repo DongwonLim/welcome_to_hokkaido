@@ -20,5 +20,6 @@ public class RestaurantDTO {
     LocalDateTime restaurantDate;
     String restaurantImage;
     int restaurantRating;
+    String restaurantName;
 
 }
